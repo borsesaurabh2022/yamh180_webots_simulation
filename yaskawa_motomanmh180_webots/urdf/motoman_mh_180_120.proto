@@ -1,0 +1,261 @@
+#VRML_SIM R2023b utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the motoman_mh_180_120
+# Extracted from: /home/ekart/heusch_ws/src/yaskawa_motomanmh180_webots/urdf/mh180.urdf
+
+PROTO motoman_mh_180_120 [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        0 0 1 0
+  field  SFString    name            "motoman_mh_180_120"  # Is `Robot.name`.
+  field  SFString    controller      "void"                # Is `Robot.controller`.
+  field  MFString    controllerArgs  []                    # Is `Robot.controllerArgs`.
+  field  SFString    customData      ""                    # Is `Robot.customData`.
+  field  SFBool      supervisor      FALSE                 # Is `Robot.supervisor`.
+  field  SFBool      synchronization TRUE                  # Is `Robot.synchronization`.
+  field  SFBool      selfCollision   FALSE                 # Is `Robot.selfCollision`.
+  field  SFBool      staticBase      TRUE                  # Defines if the robot base should be pinned to the static environment.
+  field  MFNode      toolSlot        []                    # Extend the robot with new nodes at the end of the arm.
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
+    controllerArgs IS controllerArgs
+    customData IS customData
+    supervisor IS supervisor
+    synchronization IS synchronization
+    selfCollision IS selfCollision
+    children [
+      Shape {
+        appearance DEF blue PBRAppearance {
+          baseColor 0.000000 0.000000 1.000000
+          roughness 1.000000
+          metalness 0
+        }
+        geometry DEF base_link Mesh {
+          url "/home/ekart/heusch_ws/install/yaskawa_motoman_description/share/yaskawa_motoman_description/meshes/mh180/visual/base_link.stl"
+        }
+      }
+      DEF joint_1 HingeJoint {
+        jointParameters HingeJointParameters {
+          axis 0.000000 0.000000 1.000000
+          anchor 0.000000 0.000000 0.650000
+        }
+        device [
+          RotationalMotor {
+            name "joint_1"
+            maxVelocity 2.181661564992912
+            minPosition -3.141592653589793
+            maxPosition 3.141592653589793
+            maxTorque 0.2
+          }
+          PositionSensor {
+            name "joint_1_sensor"
+          }
+        ]
+        endPoint DEF link_s Solid {
+          translation 0.000000 0.000000 0.650000
+          children [
+            Shape {
+              appearance USE blue
+              geometry DEF link_s Mesh {
+                url "/home/ekart/heusch_ws/install/yaskawa_motoman_description/share/yaskawa_motoman_description/meshes/mh180/visual/link_s.stl"
+              }
+            }
+            DEF joint_2 HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0.000000 1.000000 0.000000
+                anchor 0.325000 0.000000 0.000000
+              }
+              device [
+                RotationalMotor {
+                  name "joint_2"
+                  maxVelocity 2.007128639793479
+                  minPosition -1.0471975511965976
+                  maxPosition 1.3264502315156905
+                  maxTorque 0.2
+                }
+                PositionSensor {
+                  name "joint_2_sensor"
+                }
+              ]
+              endPoint DEF link_l Solid {
+                translation 0.325000 0.000000 0.000000
+                children [
+                  Shape {
+                    appearance USE blue
+                    geometry DEF link_l Mesh {
+                      url "/home/ekart/heusch_ws/install/yaskawa_motoman_description/share/yaskawa_motoman_description/meshes/mh180/visual/link_l.stl"
+                    }
+                  }
+                  DEF joint_3 HingeJoint {
+                    jointParameters HingeJointParameters {
+                      axis 0.000000 -1.000000 0.000000
+                      anchor 0.000000 0.000000 1.150000
+                    }
+                    device [
+                      RotationalMotor {
+                        name "joint_3"
+                        maxVelocity 2.181661564992912
+                        minPosition -1.4835298641951802
+                        maxPosition 1.5707963267948966
+                        maxTorque 0.2
+                      }
+                      PositionSensor {
+                        name "joint_3_sensor"
+                      }
+                    ]
+                    endPoint DEF link_u Solid {
+                      translation 0.000000 0.000000 1.150000
+                      children [
+                        Shape {
+                          appearance USE blue
+                          geometry DEF link_u Mesh {
+                            url "/home/ekart/heusch_ws/install/yaskawa_motoman_description/share/yaskawa_motoman_description/meshes/mh180_120/visual/link_u.stl"
+                          }
+                        }
+                        DEF joint_4 HingeJoint {
+                          jointParameters HingeJointParameters {
+                            axis -1.000000 0.000000 0.000000
+                            anchor 0.000000 0.000000 0.300000
+                          }
+                          device [
+                            RotationalMotor {
+                              name "joint_4"
+                              maxVelocity 3.1764992386296798
+                              minPosition -6.283185307179586
+                              maxPosition 6.283185307179586
+                              maxTorque 0.2
+                            }
+                            PositionSensor {
+                              name "joint_4_sensor"
+                            }
+                          ]
+                          endPoint DEF link_r Solid {
+                            translation 0.000000 0.000000 0.300000
+                            children [
+                              Shape {
+                                appearance USE blue
+                                geometry DEF link_r Mesh {
+                                  url "/home/ekart/heusch_ws/install/yaskawa_motoman_description/share/yaskawa_motoman_description/meshes/mh180_120/visual/link_r.stl"
+                                }
+                              }
+                              DEF joint_5 HingeJoint {
+                                jointParameters HingeJointParameters {
+                                  axis 0.000000 -1.000000 0.000000
+                                  anchor 1.590000 0.000000 0.000000
+                                }
+                                device [
+                                  RotationalMotor {
+                                    name "joint_5"
+                                    maxVelocity 3.0543261909900767
+                                    minPosition -2.2689280275926285
+                                    maxPosition 2.2689280275926285
+                                    maxTorque 0.2
+                                  }
+                                  PositionSensor {
+                                    name "joint_5_sensor"
+                                  }
+                                ]
+                                endPoint DEF link_b Solid {
+                                  translation 1.590000 0.000000 0.000000
+                                  children [
+                                    Shape {
+                                      appearance USE blue
+                                      geometry DEF link_b Mesh {
+                                        url "/home/ekart/heusch_ws/install/yaskawa_motoman_description/share/yaskawa_motoman_description/meshes/mh180/visual/link_b.stl"
+                                      }
+                                    }
+                                    DEF joint_6 HingeJoint {
+                                      jointParameters HingeJointParameters {
+                                        axis -1.000000 0.000000 0.000000
+                                        anchor 0.225000 0.000000 0.000000
+                                      }
+                                      device [
+                                        RotationalMotor {
+                                          name "joint_6"
+                                          maxVelocity 4.625122517784973
+                                          minPosition -6.283185307179586
+                                          maxPosition 6.283185307179586
+                                          maxTorque 0.2
+                                        }
+                                        PositionSensor {
+                                          name "joint_6_sensor"
+                                        }
+                                      ]
+                                      endPoint DEF link_t Solid {
+                                        translation 0.225000 0.000000 0.000000
+                                        children [
+                                          Shape {
+                                            appearance DEF black PBRAppearance {
+                                              baseColor 0.000000 0.000000 0.000000
+                                              roughness 1.000000
+                                              metalness 0
+                                            }
+                                            geometry DEF link_t Mesh {
+                                              url "/home/ekart/heusch_ws/install/yaskawa_motoman_description/share/yaskawa_motoman_description/meshes/mh180/visual/link_t.stl"
+                                            }
+                                          }
+                                          DEF tool0 Solid {
+                                            rotation 0.000000 1.000000 0.000000 1.570796
+                                            children [
+                                              Group {
+                                                children IS toolSlot
+                                              }
+                                            ]
+                                            physics Physics {
+                                            }
+                                            boundingObject Box {
+                                              size 0.01 0.01 0.01
+                                            }
+                                            name "tool0"
+                                          }
+                                        ]
+                                        name "link_t"
+                                        boundingObject USE link_t
+                                        physics Physics {
+                                        }
+                                      }
+                                    }
+                                  ]
+                                  name "link_b"
+                                  boundingObject USE link_b
+                                  physics Physics {
+                                  }
+                                }
+                              }
+                            ]
+                            name "link_r"
+                            boundingObject USE link_r
+                            physics Physics {
+                            }
+                          }
+                        }
+                      ]
+                      name "link_u"
+                      boundingObject USE link_u
+                      physics Physics {
+                      }
+                    }
+                  }
+                ]
+                name "link_l"
+                boundingObject USE link_l
+                physics Physics {
+                }
+              }
+            }
+          ]
+          name "link_s"
+          boundingObject USE link_s
+          physics Physics {
+          }
+        }
+      }
+    ]
+    name IS name
+    boundingObject USE base_link
+  }
+}
