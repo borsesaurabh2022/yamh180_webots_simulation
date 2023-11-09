@@ -1,0 +1,44 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "../protos/MotomanMh180120.proto"
+
+WorldInfo {
+  title "Motoman m180"
+  basicTimeStep 16
+  optimalThreadCount 4
+  physicsDisableAngularThreshold 0.1
+  contactProperties [
+    ContactProperties {
+      material1 "slope"
+      coulombFriction [
+        0.5
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.10010546907899678 -0.05017061506585427 0.9937111272620369 4.065754778683276
+  position 13.161504228967322 17.01489364347253 5.799224153114212
+  exposure 1.7
+}
+TexturedBackground {
+  texture "factory"
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 15 15
+  wallHeight 1
+}
+MotomanMh180120 {
+ name "motoman_mh_180_120"
+ translation 1 0 0
+ controller "<extern>"
+}
+Robot {
+ name "Ros2Supervisor"
+ controller "<extern>"
+}
