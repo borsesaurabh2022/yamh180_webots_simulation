@@ -8,7 +8,7 @@ PROTO MotomanMh180120 [
   field  SFVec3f     translation     0 0 0
   field  SFRotation  rotation        0 0 1 0
   field  SFString    name            "MotomanMh180120"  # Is `Robot.name`.
-  field  SFString    controller      "void"             # Is `Robot.controller`.
+  field  SFString    controller      "<extern>"         # Is `Robot.controller`.
   field  MFString    controllerArgs  []                 # Is `Robot.controllerArgs`.
   field  SFString    customData      ""                 # Is `Robot.customData`.
   field  SFBool      supervisor      FALSE              # Is `Robot.supervisor`.
@@ -35,7 +35,7 @@ PROTO MotomanMh180120 [
           metalness 0
         }
         geometry DEF base_link Mesh {
-          url "/home/ekart/heusch_ws/src/yaskawa_motomanmh180_simulation/meshes/mh180/visual/base_link.stl"
+          url "/home/srb-jarvis/ros2_ws/ws_yaskawamh180/src/yaskawa_mh180_ros2_control/yaskawa_motomanmh180_simulation/meshes/mh180/visual/base_link.stl"
         }
       }
       HingeJoint {
@@ -61,7 +61,7 @@ PROTO MotomanMh180120 [
             Shape {
               appearance USE blue
               geometry DEF link_s Mesh {
-                url "/home/ekart/heusch_ws/src/yaskawa_motomanmh180_simulation/meshes/mh180/visual/link_s.stl"
+                url "/home/srb-jarvis/ros2_ws/ws_yaskawamh180/src/yaskawa_mh180_ros2_control/yaskawa_motomanmh180_simulation/meshes/mh180/visual/link_s.stl"
               }
             }
             HingeJoint {
@@ -87,7 +87,7 @@ PROTO MotomanMh180120 [
                   Shape {
                     appearance USE blue
                     geometry DEF link_l Mesh {
-                      url "/home/ekart/heusch_ws/src/yaskawa_motomanmh180_simulation/meshes/mh180/visual/link_l.stl"
+                      url "/home/srb-jarvis/ros2_ws/ws_yaskawamh180/src/yaskawa_mh180_ros2_control/yaskawa_motomanmh180_simulation/meshes/mh180/visual/link_l.stl"
                     }
                   }
                   HingeJoint {
@@ -113,7 +113,7 @@ PROTO MotomanMh180120 [
                         Shape {
                           appearance USE blue
                           geometry DEF link_u Mesh {
-                            url "/home/ekart/heusch_ws/src/yaskawa_motomanmh180_simulation/meshes/mh180_120/visual/link_u.stl"
+                            url "/home/srb-jarvis/ros2_ws/ws_yaskawamh180/src/yaskawa_mh180_ros2_control/yaskawa_motomanmh180_simulation/meshes/mh180_120/visual/link_u.stl"
                           }
                         }
                         HingeJoint {
@@ -139,7 +139,7 @@ PROTO MotomanMh180120 [
                               Shape {
                                 appearance USE blue
                                 geometry DEF link_r Mesh {
-                                  url "/home/ekart/heusch_ws/src/yaskawa_motomanmh180_simulation/meshes/mh180_120/visual/link_r.stl"
+                                  url "/home/srb-jarvis/ros2_ws/ws_yaskawamh180/src/yaskawa_mh180_ros2_control/yaskawa_motomanmh180_simulation/meshes/mh180_120/visual/link_r.stl"
                                 }
                               }
                               HingeJoint {
@@ -165,7 +165,7 @@ PROTO MotomanMh180120 [
                                     Shape {
                                       appearance USE blue
                                       geometry DEF link_b Mesh {
-                                        url "/home/ekart/heusch_ws/src/yaskawa_motomanmh180_simulation/meshes/mh180/visual/link_b.stl"
+                                        url "/home/srb-jarvis/ros2_ws/ws_yaskawamh180/src/yaskawa_mh180_ros2_control/yaskawa_motomanmh180_simulation/meshes/mh180/visual/link_b.stl"
                                       }
                                     }
                                     HingeJoint {
@@ -195,7 +195,7 @@ PROTO MotomanMh180120 [
                                               metalness 0
                                             }
                                             geometry DEF link_t Mesh {
-                                              url "/home/ekart/heusch_ws/src/yaskawa_motomanmh180_simulation/meshes/mh180/visual/link_t.stl"
+                                              url "/home/srb-jarvis/ros2_ws/ws_yaskawamh180/src/yaskawa_mh180_ros2_control/yaskawa_motomanmh180_simulation/meshes/mh180/visual/link_t.stl"
                                             }
                                           }
                                         ]
