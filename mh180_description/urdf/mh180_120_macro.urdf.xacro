@@ -6,7 +6,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yaskawa_motoman_description/meshes/mh180/visual/base_link.stl"/>
+          <mesh filename="package://mh180_description/meshes/mh180/visual/base_link.stl"/>
         </geometry>
         <material name="blue">
           <color rgba="0 0 1 1"/>
@@ -15,7 +15,7 @@
       <collision>
       	<origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yaskawa_motoman_description/meshes/mh180/collision/base_link.stl"/>
+          <mesh filename="package://mh180_description/meshes/mh180/collision/base_link.stl"/>
           <!--box size="0.9 0.5 0.32"/-->
         </geometry>
         <material name="yellow">
@@ -27,14 +27,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yaskawa_motoman_description/meshes/mh180/visual/link_s.stl"/>
+          <mesh filename="package://mh180_description/meshes/mh180/visual/link_s.stl"/>
         </geometry>
         <material name="blue"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yaskawa_motoman_description/meshes/mh180/collision/link_s.stl"/>
+          <mesh filename="package://mh180_description/meshes/mh180/collision/link_s.stl"/>
         </geometry>
         <material name="yellow"/>
       </collision>
@@ -43,14 +43,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yaskawa_motoman_description/meshes/mh180/visual/link_l.stl"/>
+          <mesh filename="package://mh180_description/meshes/mh180/visual/link_l.stl"/>
         </geometry>
         <material name="blue"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yaskawa_motoman_description/meshes/mh180/collision/link_l.stl"/>
+          <mesh filename="package://mh180_description/meshes/mh180/collision/link_l.stl"/>
         </geometry>
         <material name="yellow"/>
       </collision>
@@ -59,14 +59,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yaskawa_motoman_description/meshes/mh180_120/visual/link_u.stl"/>
+          <mesh filename="package://mh180_description/meshes/mh180/visual/link_u.stl"/>
         </geometry>
         <material name="blue"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yaskawa_motoman_description/meshes/mh180_120/collision/link_u.stl"/>
+          <mesh filename="package://mh180_description/meshes/mh180/collision/link_u.stl"/>
         </geometry>
         <material name="yellow"/>
       </collision>
@@ -75,14 +75,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yaskawa_motoman_description/meshes/mh180_120/visual/link_r.stl"/>
+          <mesh filename="package://mh180_description/meshes/mh180/visual/link_r.stl"/>
         </geometry>
         <material name="blue"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yaskawa_motoman_description/meshes/mh180_120/collision/link_r.stl"/>
+          <mesh filename="package://mh180_description/meshes/mh180/collision/link_r.stl"/>
         </geometry>
         <material name="yellow"/>
       </collision>
@@ -91,14 +91,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yaskawa_motoman_description/meshes/mh180/visual/link_b.stl"/>
+          <mesh filename="package://mh180_description/meshes/mh180/visual/link_b.stl"/>
         </geometry>
         <material name="blue"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yaskawa_motoman_description/meshes/mh180/collision/link_b.stl"/>
+          <mesh filename="package://mh180_description/meshes/mh180/collision/link_b.stl"/>
         </geometry>
         <material name="yellow"/>
       </collision>
@@ -107,7 +107,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yaskawa_motoman_description/meshes/mh180/visual/link_t.stl"/>
+          <mesh filename="package://mh180_description/meshes/mh180/visual/link_t.stl"/>
         </geometry>
         <material name="black">
           <color rgba="0 0 0 1"/>
@@ -116,7 +116,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://yaskawa_motoman_description/meshes/mh180/collision/link_t.stl"/>
+          <mesh filename="package://mh180_description/meshes/mh180/collision/link_t.stl"/>
         </geometry>
         <material name="black"/>
       </collision>
