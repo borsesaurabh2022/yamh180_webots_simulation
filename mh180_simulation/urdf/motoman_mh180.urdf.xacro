@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="motoman_mh_180_120">
+    <xacro:arg name="initial_positions_file" default="$(find mh180_simulation)/config/initial_positions.yaml" />
+
+    <webots>
+        <plugin type="webots_ros2_control::Ros2Control"/>
+    </webots>
+
+    <!-- Import motoman_mh12 urdf file -->
+    <xacro:include filename="$(find mh180_simulation)/urdf/mh180_120.xacro" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="motoman_mh_180_120.ros2_control.xacro" />
+
+    <!-- ros2 control instance -->
+    <xacro:motoman_mh_180_120_ros2_control
+    name="WebotsControl" initial_positions_file="$(arg initial_positions_file)" />
+
+
+    <!-- <xacro:motoman_mh12_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/> -->
+
+</robot>

@@ -1,0 +1,15 @@
+mh180/motoman_mh180_controller:
+  ros__parameters:
+    joints:
+      - group_1/joint_1
+      - group_1/joint_2
+      - group_1/joint_3
+      - group_1/joint_4
+      - group_1/joint_5
+      - group_1/joint_6
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    allow_partial_joints_goal: true
