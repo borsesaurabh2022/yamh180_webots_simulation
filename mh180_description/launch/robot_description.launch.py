@@ -47,13 +47,19 @@ def generate_launch_description():
     return LaunchDescription(
         [
             launch.actions.DeclareLaunchArgument(
-                name="gui", default_value="True", description="Flag to enable joint_state_publisher_gui"
+                name="gui",
+                default_value="True",
+                description="Flag to enable joint_state_publisher_gui",
             ),
             launch.actions.DeclareLaunchArgument(
-                name="model", default_value=default_model_path, description="Absolute path to robot urdf file"
+                name="model",
+                default_value=default_model_path,
+                description="Absolute path to robot urdf file",
             ),
             launch.actions.DeclareLaunchArgument(
-                name="rvizconfig", default_value=default_rviz2_path, description="Absolute path to rviz config file"
+                name="rvizconfig",
+                default_value=default_rviz2_path,
+                description="Absolute path to rviz config file",
             ),
             joint_state_publisher_node,
             joint_state_publisher_gui_node,
