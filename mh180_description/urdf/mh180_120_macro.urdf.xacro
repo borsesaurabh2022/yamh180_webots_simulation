@@ -121,7 +121,18 @@
         <material name="black"/>
       </collision>
     </link>
-    <link name="${prefix}tool0"/>
+    <link name="${prefix}end_effector">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mh180_description/meshes/end_effector/heusch_end_effector.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="black">
+          <color rgba="0 0 0 1"/>
+        </material>
+      </visual>
+    </link>
+    <!-- <link name="${prefix}tool0"/> -->
     <!-- end of link list -->
     <!-- joint list -->
     <joint name="${prefix}joint_1" type="revolute">
@@ -166,10 +177,10 @@
       <axis xyz="-1 0 0"/>
       <limit lower="-${radians(360)}" upper="${radians(360)}" effort="2500" velocity="${radians(265)}"/>
     </joint>
-    <joint name="${prefix}joint_6-tool0" type="fixed">
-      <origin xyz="0 0 0" rpy="0 ${radians(90)} 0"/>
+    <joint name="${prefix}joint_6-end_effector" type="fixed">
+      <origin xyz="0.0 -0.04 0.0" rpy="${radians(5.0)} ${radians(0.0)} ${radians(180)}"/>
       <parent link="${prefix}link_t"/>
-      <child link="${prefix}tool0"/>
+      <child link="${prefix}end_effector"/>
     </joint>
     <!-- end of joint list -->
     <!-- ROS base_link to Robot Manufacturer World Coordinates transform -->
