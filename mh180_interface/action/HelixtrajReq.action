@@ -1,0 +1,7 @@
+float64 radius
+float64 pitch
+---
+bool response
+string message
+---
+float64[] traj_sequence

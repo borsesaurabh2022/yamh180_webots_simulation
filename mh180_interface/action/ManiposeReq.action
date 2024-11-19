@@ -1,0 +1,7 @@
+bool data
+float64[] tcp_pose
+---
+bool response
+string message
+---
+float64[] tcp_pose_sequence
