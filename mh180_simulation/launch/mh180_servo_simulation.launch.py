@@ -138,7 +138,7 @@ def launch_setup(context, *args, **kwargs):
     # As opposed to a node component, this may be necessary (for example) if Servo is running on a different PC
     servo_node = Node(
         package="moveit_servo",
-        executable="servo_node_main",
+        executable="servo_node",
         parameters=[
             servo_params,
             description,
