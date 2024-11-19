@@ -6,7 +6,8 @@
 # override_velocity_scaling_factor = 0.0 # valid range [0.0:1.0]
 
 ## Properties of outgoing commands
-publish_period: 0.034  # 1/Nominal publish rate [seconds]
+publish_period: 0.02 # 1/Nominal publish rate [seconds]
+max_expected_latency: 0.1  # delay between sending a command and the robot executing it [seconds]
 low_latency_mode: false  # Set this to true to publish as soon as an incoming Twist command is received (publish_period is ignored)
 
 command_in_type: "speed_units" # "unitless"> in the range [-1:1], as if from joystick. "speed_units"> cmds are in m/s and rad/s
@@ -35,6 +36,7 @@ smoothing_filter_plugin_name: "online_signal_smoothing::ButterworthFilterPlugin"
 # NOTE: If a different node in your system is responsible for the "primary" planning scene instance (e.g. the MoveGroup node),
 # then is_primary_planning_scene_monitor needs to be set to false.
 is_primary_planning_scene_monitor: true
+check_octomap_collisions: false
 
 ## MoveIt properties
 move_group_name: motoman_mh180  # Often 'manipulator' or 'arm'
@@ -53,7 +55,7 @@ leaving_singularity_threshold_multiplier: 1.0 # Multiply the hard stop limit by 
 ## Topic names
 cartesian_command_in_topic: ~/delta_twist_cmds  # Topic for incoming Cartesian twist commands
 joint_command_in_topic: ~/delta_joint_cmds # Topic for incoming joint angle commands
-joint_topic: /joint_states
+joint_topic: /mh180/joint_states
 status_topic: ~/status # Publish status to this topic
 command_out_topic: /motoman_mh180_controller/joint_trajectory # Publish outgoing commands here
 

@@ -73,22 +73,22 @@ def launch_setup(context, *args, **kwargs):
     # Launch the moveit control_action client node
     action_server = Node(
         package="mh180_simulation",
-        executable="mh180_moveittrajctrl_actionserver",
-        name="mh180_moveittrajctrl_actionserver",
+        executable="mh180_movegroup_actioncli.py",
+        name="mh180_movegroup_actioncli",
         output="log",
         parameters=[{"use_sim_time": use_sim_time}],
     )
 
     # Launch the moveit control_action client node
-    helix_generator = Node(
-        package="mh180_simulation",
-        executable="generate_broadcast_helix",
-        name="generate_broadcast_helix",
-        output="log",
-        parameters=[{"use_sim_time": use_sim_time}],
-    )
+    # helix_generator = Node(
+    #     package="mh180_simulation",
+    #     executable="generate_broadcast_helix",
+    #     name="generate_broadcast_helix",
+    #     output="log",
+    #     parameters=[{"use_sim_time": use_sim_time}],
+    # )
 
-    return [movegroup, servo, action_server, helix_generator]
+    return [movegroup, servo, action_server]
 
 
 def generate_launch_description():
